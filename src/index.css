@@ -8,9 +8,26 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+:root {
+	--base-color: #005aaa;
+	--base-color-hover: #004177;
+	--base-color-active: #003360;
+	--border-color: #e3e3e3;
+	--placeholder-color: #8d8d8d;
+	--transition-duration: 0.3s;
+}
+
+html {
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	box-sizing: border-box;
+}
+
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
 }
 
 /* Sections
@@ -22,6 +39,9 @@
 
 body {
 	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /**
@@ -75,6 +95,7 @@ pre {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 /**
@@ -147,6 +168,7 @@ sup {
 
 img {
 	border-style: none;
+	max-width: 100%;
 }
 
 /* Forms
